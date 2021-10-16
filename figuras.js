@@ -31,7 +31,7 @@ console.log(
 ); */
 /* const alturaTriangulo = 5.5;
 console.log('La altura del triángulo es: ' + alturaTriangulo + 'cm'); */
-    
+
 function perimetroTriangulo (lado1, lado2, ladobase) {
     return lado1 + lado2 + ladobase;
 } 
@@ -75,3 +75,31 @@ function areaCirculo (radio ) {
     return  (radio * radio) * pi;
 }
 // console.log('El área del círculo es: ' + perimetroCirculo + 'cm');
+
+// aqí interactuamos
+
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const perimetro = perimetroCuadrado(value);
+    
+    alert(perimetro);
+
+};
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const area = areaCuadrado(value);
+    
+    alert(area);
+   
+    //hablar("El área del cuadrado es " + area + 'cm2');
+};
+
+
+/* function hablar(texto){
+    var utterance = new SpeechSynthesisUtterance(texto);
+    window.speechSynthesis.speak(utterance);
+
+} */

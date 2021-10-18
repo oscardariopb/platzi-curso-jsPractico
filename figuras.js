@@ -131,7 +131,71 @@ function calcularAreaCirculo () {
     alert('área ' + area + 'cm2')
 }
 
+//****************************** */
 
+/* calcular la altura de un triángulo isósceles.
+
+La función debe recibir, como parámetros, la longitud de los 3 lados del triángulo.
+La función debe validar que la longitud de los 3 lados del triángulo corresponden a un triángulo isósceles.
+La función debe retornar la altura del triángulo. */
+
+function alturaTrianguloIsosceles (lado1, lado2, lado3) {
+    if ( (lado1 == lado2) && lado1 != lado3 && lado2 != lado3 ) {
+        const baseTriangulo = lado3;
+        const baseTrianguloRectangulo = baseTriangulo / 2;
+        let altura = 0;
+        alturaCuadrada = lado1 ** 2 - baseTrianguloRectangulo ** 2;
+        altura = Math.sqrt(alturaCuadrada);
+        return altura;
+
+        console.log(
+            'base tri ', baseTriangulo, 'base triRec ', baseTrianguloRectangulo, 
+            'altura cuadra ', alturaCuadrada, 'altura ', altura
+         );
+    } else if ((lado1 == lado3) && lado1 != lado2 && lado2 != lado3) {
+        const baseTriangulo = lado2;
+        const baseTrianguloRectangulo = baseTriangulo / 2;
+        let altura = 0;
+        alturaCuadrada = lado1 ** 2 - baseTrianguloRectangulo ** 2;
+        altura = Math.sqrt(alturaCuadrada);
+        return altura;
+
+        console.log(
+            'base tri ', baseTriangulo, 'base triRec ', baseTrianguloRectangulo, 
+            'altura cuadra ', alturaCuadrada, 'altura ', altura
+         );
+        
+    } else if ((lado2 == lado3) && lado1 != lado2 && lado1 != lado3) {
+        const baseTriangulo = lado1;
+        const baseTrianguloRectangulo = baseTriangulo / 2;
+        let altura = 0;
+        alturaCuadrada = lado2 ** 2 - baseTrianguloRectangulo ** 2;
+        altura = Math.sqrt(alturaCuadrada);
+        return altura;
+
+        console.log(
+            'base tri ', baseTriangulo, 'base triRec ', baseTrianguloRectangulo, 
+            'altura cuadra ', alturaCuadrada, 'altura ', altura
+         );
+    } else {
+        console.log('Lo sentimos, Eso no es un triángulo Isósceles');
+        return 'Lo sentimos, Eso no es un triángulo Isósceles';
+    }
+
+};
+
+function calcularAlturaTriangulo() {
+    const input1 = document.getElementById("InputTriAlLadoUno");
+    const input2 = document.getElementById("InputTriAlLadoDos");
+    const input3 = document.getElementById("InputTriAlLadoTres");
+    console.log(Number(input1.value), Number(input2.value), Number(input3.value));
+    const altura = alturaTrianguloIsosceles(Number(input1.value), Number(input2.value), Number(input3.value));
+    alert('altura ' + altura)
+}
+
+alturaTrianguloIsosceles(8, 8, 6);
+alturaTrianguloIsosceles(8, 6, 8);
+alturaTrianguloIsosceles(6, 8, 8);
 
 
 

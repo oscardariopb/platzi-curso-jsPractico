@@ -76,7 +76,7 @@ function areaCirculo (radio ) {
 }
 // console.log('El área del círculo es: ' + perimetroCirculo + 'cm');
 
-// aqí interactuamos
+// aquí interactuamos
 
 function calcularPerimetroCuadrado() {
     const input = document.getElementById("InputCuadrado");
@@ -92,10 +92,49 @@ function calcularAreaCuadrado() {
     const value = input.value;
     const area = areaCuadrado(value);
     
-    alert(area);
-   
+    alert(area + 'cm2');
+    
     //hablar("El área del cuadrado es " + area + 'cm2');
 };
+
+function calcularPerimetroTriangulo() {
+    const input1 = document.getElementById("InputTriLadoUno");
+    const input2 = document.getElementById("InputTriLadoDos");
+    const input3 = document.getElementById("InputTriLadoBase");
+
+    const perimetro = perimetroTriangulo(Number(input1.value), Number(input2.value), Number(input3.value));
+    
+    alert('Perimentro Tri ' + perimetro);
+};
+
+function calcularAreaTriangulo() {
+    const input1 = document.getElementById("InputTriLadoBase");
+    const input2 = document.getElementById("InputTriAltura");
+
+    const areaTrian = areaTriangulo(input1.value, input2.value);
+    
+    alert('Área Tri ' + areaTrian + 'cm2');
+};
+
+// Circulo
+function calcularPerimetroCirculo () {
+    const input1 = document.getElementById("InputRadioCirculo");
+    const diametro = diametroCirculo(input1.value);
+
+    const perimetro = perimetroCirculo(input1.value);
+    alert('perímetro ' + perimetro)
+}
+
+function calcularAreaCirculo () {
+    const input1 = document.getElementById("InputRadioCirculo");
+    const area = areaCirculo(input1.value);
+    alert('área ' + area + 'cm2')
+}
+
+
+
+
+
 
 
 /* function hablar(texto){

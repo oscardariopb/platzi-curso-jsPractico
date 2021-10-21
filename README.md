@@ -17,3 +17,10 @@ Repositorio para los talleres de jsPractico.
 - segundo: que funcione el código así sea con lados quemados (implementar las fórmulas en js)
 - tercero: crear funciones
 - cuarto: integrar JS con HTML
+
+## TALLER 3: Promedio, mediana y moda
+
+- primero: definir formulas
+- segundo: que funcione el código así sea con lados quemados (implementar las fórmulas en js)
+- tercero: crear funciones
+- cuarto: integrar JS con HTML

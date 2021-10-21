@@ -14,12 +14,23 @@ function calcularMediaAritmetica(lista) {
     return promedioLista;
 };
 
+function calcularMedianaAritmetica(lista) {
+    let mediana;
+    
+    const mitadLista = parseInt(lista.length / 2);
+    
+    if (esPar(lista.length)) {
+        const elemento1 = lista[mitadLista - 1];
+        const elemento2 = lista[mitadLista ];
+        const promedioElemento1y2 = calcularMediaAritmetica([elemento1, elemento2])
+        mediana = promedioElemento1y2;
+        return mediana;
+    } else {
+        mediana = lista[mitadLista];
+        return mediana;
+    }
 
-const lista1 = [
-    100, 200, 500, 40000000
-];
-
-const mitadLista1 = parseInt(lista1.length) / 2;
+};
 
 function esPar(numerito) {
 
@@ -34,13 +45,20 @@ function esPar(numerito) {
     // supongo el otro caso del que habla el profe es si el arreglo es vacio, o sea 0 en el módulo
 }
 
-let mediana;
+const listaEjemplo = [2, 1, 3, 10];
 
-if (esPar(lista1.length)) {
-    const elemento1 = lista1[mitadLista1];
-    const elemento2 = lista1[mitadLista1 - 1];
-    const promedioElemento1y2 = calcularMediaAritmetica([elemento1, elemento2])
-    mediana = promedioElemento1y2;
-} else {
-    mediana = lista1[mitadLista1];
+console.log(listaEjemplo)
+console.log(listaEjemplo.sort())
+console.log(listaEjemplo.sort(ordenar))
+
+function ordenar(a, b) {
+    if (a > b) {
+        return  1;
+    } else if (a < b) {
+        return  -1;
+    } else {
+        return 0;
+    }
 }
+
+

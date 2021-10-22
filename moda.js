@@ -1,21 +1,27 @@
-const lista1 = [
+/* const lista1 = [
     1,2,3,4,1,1,1,2,2,1
-];
+]; */
 
-const lista1Count = {};
 
-lista1.map(
-    function (elemento) {
-        if (lista1Count[elemento]) {
-            lista1Count[elemento] += 1; //lista1Count[elemento] + 1;
-        } else {
-            lista1Count[elemento] = 1;
+function calcularModa(lista) {
+    const listaCount = {};
+
+    lista.map(
+        function (elemento) {
+            if (listaCount[elemento]) {
+                listaCount[elemento] += 1; //listaCount[elemento] + 1;
+            } else {
+                listaCount[elemento] = 1;
+            }
         }
-    }
-);
-
-const lista1Array = Object.entries(lista1Count).sort(
-    function (valorAcumulado, nuevoValor) {
-        valorAcumulado - nuevoValor;
-    }
-); // objeto convertir a array
+    );
+    
+    const listaArray = Object.entries(listaCount).sort(
+        function (valorAcumulado, nuevoValor) {
+            return valorAcumulado[1] - nuevoValor[1];
+        }
+    ); // objeto convertir a array
+    
+    const moda = listaArray[listaArray.length - 1];
+    return moda;
+}

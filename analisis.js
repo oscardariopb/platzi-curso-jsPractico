@@ -60,7 +60,7 @@ const medianaGeneralCol = medianaSalario(salariosColSorted);
 // mediana del top diez
 
 
-const spliceStart = (salariosColSorted.length  * 90) / 100;
+const spliceStart = parseInt( (salariosColSorted.length  * 90) / 100 );
 const spliceCount = salariosColSorted.length - spliceStart;
 
 const salarioColTop10 = salariosColSorted.splice(spliceStart, spliceCount);

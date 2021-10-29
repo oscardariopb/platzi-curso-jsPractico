@@ -9,24 +9,37 @@
 <body>
     <h1>Cuota fija de prestamo</h1>
 
-    <section id="tablaPrestamo"></section>
-    <section id="tablaPres">
-    <table>
-        <thead>
-        <tr id="trHeader">
-            <th>Fecha Cuota</th>
-            <th>Mes</th>
-            <th>Saldo Inicial</th>
-            <th>Valor Cuota</th>
-            <th>Interes</th>
-            <th>Abono Capital</th>
-            <th>Saldo Final</th>
-        </tr>
-        </thead>
-        <tbody id="bodyTabla">
+    <section id="tablaPrestamo">
+        <label for="prestamo">Prestamo a Solicitar</label>
+        <input id="prestamo" type="number">
         
-        </tbody>
-    </table>
+        <label for="periodos">Número de Periodos</label>
+        <input id="periodos" type="number">
+        
+        <label for="tasaInteresAnual">Tasa Efectiva Anual %</label>
+        <input id="tasaInteresAnual" type="number">
+        
+        <button type="button" onclick="calcularCuota()" > Calcular Cuotas</button>
+
+    </section> <br>
+
+    <section id="tablaPres">
+        <table>
+            <thead>
+            <tr id="trHeader">
+                <th>Fecha Cuota</th>
+                <th>Mes</th>
+                <th>Saldo Inicial</th>
+                <th>Valor Cuota</th>
+                <th>Interes</th>
+                <th>Abono Capital</th>
+                <th>Saldo Final</th>
+            </tr>
+            </thead>
+            <tbody id="bodyTabla">
+            
+            </tbody>
+        </table>
     </section>
 
     <script src="./tallerFinal.js"></script>
